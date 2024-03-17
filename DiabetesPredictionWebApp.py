@@ -8,7 +8,7 @@ from PIL import Image
 
 
 #loading the saved model
-loaded_model = pickle.load(open(r'C:\Users\HP\Desktop\GOMYCODE\trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
 
 #creating a function for prediction
@@ -31,7 +31,7 @@ def diabetes_prediction(input_data):
 
 def main():
     # display image
-    img = Image.open(r"C:\Users\HP\PycharmProjects\WhatsApp Image 2024-03-17 at 15.39.23_22265810.jpg")
+    img = Image.open("Diabetes.jpg")
     new_image = img.resize((700, 200))
     st.image(new_image)
     # let's display
